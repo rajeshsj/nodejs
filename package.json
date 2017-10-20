@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/nodejs"
+    "url": "https://github.com/api-ai/apiai-weather-webhook-sample"
   },
   "keywords": [
     "node",
