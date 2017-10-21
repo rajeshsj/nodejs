@@ -1,6 +1,14 @@
 const https = require('https');
  
-https.get('https://demo6927372.mockable.io/northbus', (resp) => {
+ 
+ exports.findBus = (req, res) => {
+    const assistant = new Assistant({ request: req, response: res });
+
+    function responseHandler(assistant) {
+        var busNumber = assistant.getArgument('busnumber');
+        var busDirection = assistant.getArgument('direction').toLowerCase();
+
+     https.get('https://demo6927372.mockable.io/northbus', (resp) => {
   let data = '';
  
   // A chunk of data has been recieved.
@@ -16,3 +24,5 @@ https.get('https://demo6927372.mockable.io/northbus', (resp) => {
 }).on("error", (err) => {
   console.log("Error: " + err.message);
 });
+ }
+	}
